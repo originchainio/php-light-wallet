@@ -300,13 +300,7 @@ class Lightwallet{
         }
         $res = json_decode($result, true);
 
-        // the function will return false if something goes wrong
-        if ($res['status'] == "ok" || $res['coin'] == 'origin') {
-            return $res['data'];
-        }else{
-            echo 'result error';
-            return false;
-        }  
+        return $res;
     }
 }
 function echo_array($a) { echo "<pre>"; print_r($a); echo "</pre>"; }
